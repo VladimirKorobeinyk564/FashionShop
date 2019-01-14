@@ -1,0 +1,274 @@
+.our_blogs{
+	text-align: center;
+	position: relative;
+	z-index: 0;
+
+	.blog_content{
+		position: relative;
+		bottom: -188px;
+		margin-top: -110px;
+
+		.our_blogs_title{
+			font-size: 26px;
+			font-weight: 600;
+			color: $titleColor;
+			text-transform: uppercase;
+			margin-bottom: 22px;
+		}
+		.blog_slider{
+			margin-top: 50px;
+
+			.blog_cards{
+				display: flex;
+				justify-content: space-between;
+
+				.blog_card{
+					position: relative;
+					
+					img{
+						max-width: 100%;
+					}
+
+					.blog_card-info{
+						text-align: center;
+						background: $white;
+						padding: 20px 40px;
+						max-width: 70.41%;
+						position: relative;
+						left: 50%;
+						transform: translateX(-50%);
+						bottom: 41px;
+						cursor: pointer;
+						transition: all 1s;
+
+						&:hover{
+							box-shadow: 0 0 12px gray;
+						}
+
+						a{
+							text-decoration: none;
+						}
+
+						.blog_text{
+							font-size: 17.79px;
+							font-weight: 600;
+							color: #302F2B;
+							text-transform: uppercase;
+							margin-bottom: 5px;
+						}
+
+						.data{
+							font-size: 14px;
+							line-height: 24px;
+							color: #7B7B7B;
+						}
+					}
+				}
+
+				.owl-carousel{
+
+					.owl-nav{
+						display: block; 
+						
+						button.owl-prev, button.owl-next{
+							background: url(../img/sprite-arrow2.png) 0 0 no-repeat; 
+							width: 49px;
+							height: 49px;
+							border: none;
+							box-shadow: none;
+							position: absolute;
+							top: 40%;
+							cursor: pointer;
+							transform: translateY(-50%);
+							outline: none; 
+							opacity: 0.8;
+							transition: opacity 0.5s;
+							z-index: 12;
+						}
+
+						button.owl-next{
+							background-position: -49px 0;
+							right: -80px;
+							
+							&:hover{
+								opacity: 1;
+								background-position: -49px -49px; 
+							}
+						}
+
+						button.owl-prev{
+							left: -80px;
+
+							&:hover{
+								opacity: 1;
+								background-position: 0px -49px; 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.our_blogs{
+		width: calc(100% -70px);
+		margin: auto 90px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.our_blogs{
+
+		.blog_slider{
+
+			.blog_cards{
+
+				.blog_card{
+
+					.blog_card-info{
+						
+						p.blog_text{
+							font-size: 15.79px;
+						}
+
+						.data{
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.our_blogs{
+		width: calc(100% -70px);
+		margin: auto 0px;
+
+		.blog_content{
+			margin-top: -190px;
+
+			.blog_slider{
+
+				.blog_cards{
+					
+					.owl-dots{
+
+						text-align: center;
+						padding: 0 0 15px 0;
+						position: relative;
+						bottom: 51px;
+
+						.owl-dot{
+							width: 10px;
+							height: 10px;
+							border-radius: 10px;
+							background: $white;
+							box-sizing: border-box;
+							border: 1px solid $black;
+							box-shadow: none;
+							padding: 0;
+							margin: 0 5px;
+							cursor: pointer;
+							outline: none;
+						}
+
+						.active{
+							background: $colorBtn;
+						}
+					}
+
+					.owl-carousel{
+
+						.blog_card{
+
+							.blog_card-info{
+								width: 54.61%;
+							}
+
+						}
+
+						.owl-nav{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 685px) {
+	.our_blogs{
+
+		.blog_slider{
+
+			.blog_cards{
+
+				.blog_card{
+
+					.blog_card-info{
+						
+						p.blog_text{
+							font-size: 13.79px;
+						}
+
+						.data{
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.our_blogs{
+
+
+		.blog_slider{
+
+			.blog_cards{
+
+				.owl-carousel{
+
+					.blog_card{
+
+						.blog_card-info{
+							
+							p.blog_text{
+								font-size: 11.79px;
+							}
+
+							.data{
+								font-size: 11px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.our_blogs{
+
+		.blog_slider{
+
+			.blog_cards{
+
+				.blog_card{
+
+					.blog_card-info{
+						max-width: 60.41%;
+					}
+				}
+			}
+		}
+	}
+}

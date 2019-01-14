@@ -1,0 +1,94 @@
+.banner{
+	background: url('../img/banner1.jpg') left center no-repeat; 
+	background-size: cover;
+	margin: 25px 0; 
+	padding: 58px 0 48px 0;
+	display: flex;
+	justify-content: flex-end;
+
+	.banner_information{
+		flex-basis: 630px;
+		margin-right: 70px;
+		text-align: center;
+	}
+
+	.banner_title{
+		font-size: 26px;
+		line-height: 30px;
+		font-weight: 600;
+		color: $bannerText;
+		margin-bottom: 20px;
+		letter-spacing: 2.6px;
+		text-transform: uppercase;
+	}
+
+	.banner_text{
+		font-size: 14px;
+		color: $bannerText;
+		letter-spacing: 5.6px;
+		text-transform: uppercase;
+		margin-bottom: 56px;
+	}
+
+	.banner_btn{
+		@include btn();
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $bannerText;
+		text-decoration: none;
+		background: $white;
+		transition: background 1s;
+		margin-bottom: 40px;
+		letter-spacing: 1.4px;
+
+		&:hover{
+			background: #E7E7E7;
+			color: $bannerText;
+		}
+
+		&:active{
+			background: #CDCDCD;
+			color: #44433F;
+		}
+
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.banner{
+		background-position: -140px 0;
+
+			.banner_information{
+				margin-right: 0px;
+		} 
+	}	
+}
+
+@media screen and (max-width: 870px) {
+	.banner{
+		background: $bgBanner;
+		text-align: center;
+
+			.banner_information{
+				item-align: center;
+				flex-basis: 100%;
+		} 
+	}	
+}
+
+@media screen and (max-width: 480px) {
+	.banner{
+		
+		.banner_information{
+			
+			.banner_title{
+				font-size: 18px;
+			}
+
+			.banner_text{
+				line-height: 20px;
+				font-size: 11px;
+			}
+		} 
+	}	
+}

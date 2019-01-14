@@ -1,0 +1,52 @@
+.top{
+	padding-top: 30px;
+	padding-bottom: 25px;
+	border-bottom: 6px solid $topBorderColor;
+
+	&_wrap{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&_menu{
+		flex-basis: 58%;
+
+		a{
+			transition: all 2s;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.top{
+		&_left{
+			flex-basis: 100%;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+
+		&_menu{
+			flex-basis: 80%;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.top{
+		&_menu{
+			flex-basis: 100%;
+			text-align: center;
+		}
+
+		&_right{
+			flex-basis: 100%;
+			justify-content: center;
+		}
+	}
+}
+
+
+
+

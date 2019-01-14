@@ -1,0 +1,21 @@
+.icons{
+	display: flex;
+	align-items: center;
+	
+
+	&_cart, &_search{
+		margin: 0 12px;
+
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+
+	&_search{
+		position: relative;
+	}
+
+	&_img{
+		display: block;
+	}
+}

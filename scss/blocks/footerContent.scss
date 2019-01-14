@@ -1,0 +1,163 @@
+.footer_content{
+	background: #F6F5F6; 
+	display: flex;
+	justify-content: center;
+	@include min-max(320px, 100%, 0);
+	padding: 242px 0 100px;
+
+	.main_content{
+		display: flex;
+		justify-content: space-between;
+		@include min-max(320px, 1200px, 15px);
+
+		.info_content{
+			display: flex;
+			justify-content: space-between;
+
+			.block_content{
+				margin-right: 94px;
+
+				.block_title{
+					font-weight: 700; 
+					font-size: 15px;
+					text-transform: uppercase;
+					color: $titleFooterContent;
+					margin-bottom: 38px;
+				}
+
+				ul{
+					padding: 0;
+
+					li{
+						a{
+							font-size: 14px;
+							font-weight: 300;
+							text-decoration: none;
+							color: $textFooterContent;
+							line-height: 30px;
+
+							&:hover{
+								color: #858585;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.block_contacts{
+
+			.contacts_title{
+				font-weight: 700; 
+				font-size: 15px;
+				text-transform: uppercase;
+				color: $titleFooterContent;
+				margin-bottom: 38px;
+			}
+
+			.telephone, .email, .office{
+				font-size: 14px;
+				font-weight: 300;
+				text-decoration: none;
+				color: $textFooterContent;
+				line-height: 30px;
+				cursor: pointer;
+
+				&:hover{
+					color: #858585;
+				}
+			}
+
+			.office{
+				line-height: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.footer_content{
+
+		.main_content{
+			flex-direction: column;
+
+			.info_content{
+				justify-content: space-between;
+
+				.block_content{
+					margin: 0 46px; 
+				}
+			}
+			
+			.block_contacts{
+				text-align: center;
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 811px) {
+	.footer_content{
+
+		.main_content{
+			flex-direction: column;
+			margin: 0;
+
+			.info_content{
+				justify-content: space-between;
+				flex-wrap: wrap;
+
+				.block_content{
+					margin: 10px 10px;
+					flex-basis: 30%; 
+				}
+			}
+			
+			.block_contacts{
+				text-align: center;
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 480px) {
+	.footer_content{
+
+		.main_content{
+			flex-direction: column;
+
+			.info_content{
+				flex-direction: column;
+
+				.block_content{
+					margin: 0; 
+					text-align: center;
+
+					.block_title{
+						margin-top: 40px;
+						font-size: 18px;
+						margin-bottom: 20px;
+					}
+
+					ul{
+						li{
+							a{
+								font-size: 19px;
+							}
+						}
+					}
+				}
+			}
+			
+			.block_contacts{
+				text-align: center;
+				margin-top: 30px;
+				flex-direction: column;
+			}
+		}
+	}
+}

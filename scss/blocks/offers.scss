@@ -1,0 +1,190 @@
+.offers{
+	display: flex;
+	justify-content: space-between;
+	margin: 50px 0 25px 0;
+
+	&_left, &_right{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: relative;
+	}
+	
+	&_center{
+		margin: 0 2.1%;
+	}
+
+	.offers_element{
+		position: relative;
+
+		img{
+			display: block;
+			max-width: 100%;
+		}
+
+		.offers_category{
+			font-size: 13px;
+			margin-bottom: 6px;
+			line-height: 36px;
+			letter-spacing: 0.65px;
+			font-weight: 500;
+		}
+
+		.offers_name{
+			font-size: 19px;
+			line-height: 24px;
+			font-weight: 700;
+			color: $offersColor;
+			margin-bottom: 40px;
+		}
+
+		a{
+			@include btn();
+		}
+	}
+
+	.offers_info{
+		position: absolute;
+		z-index: 1;
+		left: 30px;
+
+		p{
+			margin: 10px 0; 
+		}
+
+		.offers_two-get{
+			font-size: 22px;
+			font-weight: 700;
+			color: $offersColor;
+		}
+	}
+
+	.offers_info-center{
+		top: 100px;
+	}
+
+	.offers_element-rigth{
+		top: 44px;
+	}
+
+	.offers_info-glasses{
+		font-size: 13px;
+		font-weight: 700;
+		color: $offersColor;
+		left: 62px;
+		bottom: 20px;
+	}
+
+	.offers_info-left{
+		left: 62px;
+		bottom: 20px;
+		text-align: center;
+	}
+
+	.offers_new{
+		background: $offersColor;
+		color: $white;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		padding: 6px 10px;
+		text-transform: uppercase;
+		font-size: 11px;
+
+		&::before{
+			content: '';
+			border: 10px solid transparent;
+			border-left: 10px solid $offersColor;
+			position: absolute;
+			left: 0;
+			bottom: -9px; 
+		}
+	}
+}
+
+
+@media screen and (max-width: 1024px) {
+	.offers{
+
+		.offers_right{
+
+			.offers_element-rigth{
+
+				p.offers_name{
+					margin-bottom: 20px;
+				}
+			}
+		}
+
+		.offers_left{
+
+			.offers_info-left {
+    			left: 50px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 980px) {
+	.offers{
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&_right{
+			margin-top: 2.1%;
+			justify-content: space-between;
+			
+			.offers_new{
+				right: 30px;
+			}
+
+
+			.offers_element{
+				img:last-child{
+					margin-top: 2.1%;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 811px) {
+	.offers{
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0 20px;
+
+		&_element{
+			max-width: 371px;
+			margin: 20px auto;
+		}
+
+		&_right{
+			flex-direction: column;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.offers{
+
+		&_element{
+			
+			.offers_info-center{
+				top: 73px;
+			}
+		}
+
+		&_right{
+			img{
+				margin: 0;
+			}
+			
+			.offers_element-rigth{
+				top: 10px;
+				left: 12px;
+			}	
+		}
+	}	
+}

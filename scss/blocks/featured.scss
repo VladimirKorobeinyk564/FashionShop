@@ -1,0 +1,175 @@
+.featured{
+	text-align: center;
+
+	.featured_title{
+		font-size: 26px;
+		font-weight: 600;
+		color: $titleColor;
+		text-transform: uppercase;
+		margin-bottom: 22px;
+	}
+
+	.featured_slider{
+		margin-bottom: 45px;
+
+		.featured_cards{
+			display: flex;
+			justify-content: space-between;
+			
+			.featured_card{
+				img{
+					max-width: 100%;
+				}
+
+				.card_info{
+					margin-top: 30px;
+					text-align: left;
+
+					.card_name{
+						font-size: 15px;
+						font-weight: 700;
+						line-height: 20px;
+						margin-bottom: 10px;
+					}
+
+					.brand{
+						font-size: 15px;
+						color: #878787;
+						margin-bottom: 7px;
+					}
+
+					.cost{
+						font-size: 15px;
+						font-weight: 600;
+
+						span{
+							font-weight: 400;
+							margin-right: 5px;
+						}
+					}
+				}
+			}
+
+			.owl-carousel{
+
+				.owl-nav{
+					
+					button.owl-prev, button.owl-next{
+						background: url(../img/sprite-arrow2.png) 0 0 no-repeat; 
+						width: 49px;
+						height: 49px;
+						border: none;
+						box-shadow: none;
+						position: absolute;
+						top: 40%;
+						cursor: pointer;
+						transform: translateY(-50%);
+						outline: none; 
+						opacity: 0.8;
+						transition: opacity 0.5s; 
+					}
+
+					button.owl-next{
+						background-position: -49px 0;
+						right: -80px;
+						
+						&:hover{
+							opacity: 1;
+							background-position: -49px -49px; 
+						}
+					}
+
+					button.owl-prev{
+						left: -80px;
+
+						&:hover{
+							opacity: 1;
+							background-position: 0px -49px; 
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	.featured_button{
+
+		.featured_btn{
+			@include btn();
+			background: $white;
+			color: $black;
+			border: 2px solid #D3C7A8; 
+			font-size: 12px;
+			letter-spacing: 0.6px;
+
+			&:hover{
+				border: 2px solid #D0C488;
+				background: #EAEAEA;
+				color: $black;
+			}
+
+			&:active{
+				background: #E1E1E1;
+				color: $black; 
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.featured{
+		width: calc(100% -100px);
+		margin: auto 90px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.featured{
+		
+		.featured_slider{
+			margin-bottom: 45px;
+
+			.featured_cards{
+
+				.featured_card{
+
+					.card_info{
+						text-align: center;
+					}
+				}
+			}
+		}
+
+		.owl-dots{
+
+				text-align: center;
+				padding: 0 0 15px 0;
+				position: relative;
+				bottom: -14px;
+
+				.owl-dot{
+					width: 10px;
+					height: 10px;
+					border-radius: 10px;
+					background: $white;
+					box-sizing: border-box;
+					border: 1px solid $black;
+					box-shadow: none;
+					padding: 0;
+					margin: 0 5px;
+					cursor: pointer;
+					outline: none;
+				}
+
+				.active{
+					background: $colorBtn;
+			}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.featured{
+		margin: 0px;
+		}
+	}
+}
